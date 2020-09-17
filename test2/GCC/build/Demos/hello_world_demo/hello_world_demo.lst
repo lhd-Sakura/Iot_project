@@ -1,0 +1,211 @@
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"hello_world_demo.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata
+  18              		.align	2
+  19              	.LC0:
+  20 0000 48656C6C 		.ascii	"Hello World! This is BearPi!\015\000"
+  20      6F20576F 
+  20      726C6421 
+  20      20546869 
+  20      73206973 
+  21              		.section	.text.app_hello_world_entry,"ax",%progbits
+  22              		.align	1
+  23              		.arch armv7e-m
+  24              		.syntax unified
+  25              		.thumb
+  26              		.thumb_func
+  27              		.fpu fpv4-sp-d16
+  29              	app_hello_world_entry:
+  30              	.LFB3:
+  31              		.file 1 "e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo/hello_world_demo.c"
+   1:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** /*----------------------------------------------------------------------------
+   2:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * Copyright (c) <2018>, <Huawei Technologies Co., Ltd>
+   3:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * All rights reserved.
+   4:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * Redistribution and use in source and binary forms, with or without modification,
+   5:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * are permitted provided that the following conditions are met:
+   6:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * 1. Redistributions of source code must retain the above copyright notice, this list of
+   7:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * conditions and the following disclaimer.
+   8:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * 2. Redistributions in binary form must reproduce the above copyright notice, this list
+   9:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * of conditions and the following disclaimer in the documentation and/or other materials
+  10:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * provided with the distribution.
+  11:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * 3. Neither the name of the copyright holder nor the names of its contributors may be used
+  12:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * to endorse or promote products derived from this software without specific prior written
+  13:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * permission.
+  14:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  15:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  16:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  17:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+  18:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  19:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  20:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  21:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  22:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  23:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s 			page 2
+
+
+  24:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  25:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  *---------------------------------------------------------------------------*/
+  26:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** /*----------------------------------------------------------------------------
+  27:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * Notice of Export Control Law
+  28:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * ===============================================
+  29:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * Huawei LiteOS may be subject to applicable export control laws and regulations, which might
+  30:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * include those applicable to Huawei LiteOS of U.S. and the country in which you are located.
+  31:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * Import, export and usage of Huawei LiteOS in any manner by you shall be in compliance with such
+  32:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  * applicable export control laws and regulations.
+  33:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  *---------------------------------------------------------------------------*/
+  34:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** /**
+  35:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  *  DATE                AUTHOR      INSTRUCTION
+  36:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  *  2019-07-23 10:00    yuhengP    The first version  
+  37:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  *
+  38:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****  */
+  39:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** #include <stdint.h>
+  40:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** #include <stddef.h>
+  41:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** #include <string.h>
+  42:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** 
+  43:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** #include <osal.h>
+  44:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** 
+  45:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** static int app_hello_world_entry()
+  46:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** {
+  32              		.loc 1 46 1
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              	.LCFI1:
+  43              		.cfi_def_cfa_register 7
+  44              	.L2:
+  47:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****     while (1)
+  48:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****     {
+  49:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****         printf("Hello World! This is BearPi!\r\n");
+  45              		.loc 1 49 9 discriminator 1
+  46 0004 0348     		ldr	r0, .L3
+  47 0006 FFF7FEFF 		bl	puts
+  50:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  48              		.loc 1 50 9 discriminator 1
+  49 000a 4FF47A60 		mov	r0, #4000
+  50 000e FFF7FEFF 		bl	osal_task_sleep
+  49:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  51              		.loc 1 49 9 discriminator 1
+  52 0012 F7E7     		b	.L2
+  53              	.L4:
+  54              		.align	2
+  55              	.L3:
+  56 0014 00000000 		.word	.LC0
+  57              		.cfi_endproc
+  58              	.LFE3:
+  60              		.section	.rodata
+  61 001e 0000     		.align	2
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s 			page 3
+
+
+  62              	.LC1:
+  63 0020 68656C6C 		.ascii	"helloworld\000"
+  63      6F776F72 
+  63      6C6400
+  64              		.section	.text.standard_app_demo_main,"ax",%progbits
+  65              		.align	1
+  66              		.global	standard_app_demo_main
+  67              		.syntax unified
+  68              		.thumb
+  69              		.thumb_func
+  70              		.fpu fpv4-sp-d16
+  72              	standard_app_demo_main:
+  73              	.LFB4:
+  51:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****     }
+  52:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** }
+  53:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** 
+  54:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** int standard_app_demo_main()
+  55:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** {
+  74              		.loc 1 55 1
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 1, uses_anonymous_args = 0
+  78 0000 80B5     		push	{r7, lr}
+  79              	.LCFI2:
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 7, -8
+  82              		.cfi_offset 14, -4
+  83 0002 82B0     		sub	sp, sp, #8
+  84              	.LCFI3:
+  85              		.cfi_def_cfa_offset 16
+  86 0004 02AF     		add	r7, sp, #8
+  87              	.LCFI4:
+  88              		.cfi_def_cfa 7, 8
+  56:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****     osal_task_create("helloworld",app_hello_world_entry,NULL,0x400,NULL,2);
+  89              		.loc 1 56 5
+  90 0006 0223     		movs	r3, #2
+  91 0008 0193     		str	r3, [sp, #4]
+  92 000a 0023     		movs	r3, #0
+  93 000c 0093     		str	r3, [sp]
+  94 000e 4FF48063 		mov	r3, #1024
+  95 0012 0022     		movs	r2, #0
+  96 0014 0349     		ldr	r1, .L7
+  97 0016 0448     		ldr	r0, .L7+4
+  98 0018 FFF7FEFF 		bl	osal_task_create
+  57:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c ****     return 0;
+  99              		.loc 1 57 12
+ 100 001c 0023     		movs	r3, #0
+  58:e:/MCU/A_Project/Iot_project/test2/Demos/hello_world_demo\hello_world_demo.c **** }
+ 101              		.loc 1 58 1
+ 102 001e 1846     		mov	r0, r3
+ 103 0020 BD46     		mov	sp, r7
+ 104              	.LCFI5:
+ 105              		.cfi_def_cfa_register 13
+ 106              		@ sp needed
+ 107 0022 80BD     		pop	{r7, pc}
+ 108              	.L8:
+ 109              		.align	2
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s 			page 4
+
+
+ 110              	.L7:
+ 111 0024 00000000 		.word	app_hello_world_entry
+ 112 0028 20000000 		.word	.LC1
+ 113              		.cfi_endproc
+ 114              	.LFE4:
+ 116              		.text
+ 117              	.Letext0:
+ 118              		.file 2 "c:\\users\\administrator\\.iotlink\\tools\\gcc-arm-none-eabi\\arm-none-eabi\\include\\sys
+ 119              		.file 3 "c:\\users\\administrator\\.iotlink\\tools\\gcc-arm-none-eabi\\arm-none-eabi\\include\\sys
+ 120              		.file 4 "c:\\users\\administrator\\.iotlink\\tools\\gcc-arm-none-eabi\\lib\\gcc\\arm-none-eabi\\9.
+ 121              		.file 5 "c:\\users\\administrator\\.iotlink\\tools\\gcc-arm-none-eabi\\arm-none-eabi\\include\\sys
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hello_world_demo.c
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:18     .rodata:00000000 $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:22     .text.app_hello_world_entry:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:29     .text.app_hello_world_entry:00000000 app_hello_world_entry
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:56     .text.app_hello_world_entry:00000014 $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:65     .text.standard_app_demo_main:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:72     .text.standard_app_demo_main:00000000 standard_app_demo_main
+C:\Users\ADMINI~1\AppData\Local\Temp\cctio91v.s:111    .text.standard_app_demo_main:00000024 $d
+
+UNDEFINED SYMBOLS
+puts
+osal_task_sleep
+osal_task_create
